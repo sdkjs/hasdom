@@ -1,6 +1,7 @@
 {
   "name": "hasdom",
   "version": "0.0.1",
+  "main": "dist/hasdom.js",
   "description": "Check if a JavaScript environment has a real DOM",
   "license": "MIT",
   "repository": "simongfxu/hasdom",

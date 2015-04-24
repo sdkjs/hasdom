@@ -1,0 +1,18 @@
+{
+    "asi"      : true,
+    "browser"  : true,
+    "node"     : true,
+    "eqeqeq"   : false,
+    "eqnull"   : true,
+    "expr"     : true,
+    "latedef"  : false,
+    "laxbreak" : false,
+    "undef"    : true,
+    "unused"   : false,
+    "devel"    : true,
+    "boss"     : true,
+    "esnext"   : true,
+    "predef"  : [
+        "define"
+    ]
+}

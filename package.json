@@ -8,17 +8,14 @@
   "keywords": [
 	"dom",
 	"environment",
-    "hasdom"
+    	"hasdom"
   ],
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-babel": "^5.0.0",
     "gulp-esperanto": "simongfxu/gulp-esperanto",
     "gulp-jshint": "^1.9.4",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.1.0"
-  },
-  "scripts": {
-    "build": "gulp"
   }
 }

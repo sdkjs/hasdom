@@ -16,7 +16,7 @@ export function hasDOM() {
 
 		var el = node.querySelector('i')
 
-		return el && el.tagName === 'I'
+		return !!el && el.tagName === 'I'
 	}
 
 	return false

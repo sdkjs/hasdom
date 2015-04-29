@@ -13,13 +13,27 @@
 
 	function hasDOM() {
 
-		if (document && isFunction(document.createElement) && isFunction(document.querySelector)) {
+		if (document && isFunction(document.createElement)) {
 			var node = document.createElement('div');
 			node.innerHTML = '<i></i>';
 
-			var el = node.querySelector('i');
+			/**
+			 * for modern browsers such as IE version >= 9, chrome, firefox
+			 */
+			if (isFunction(node.querySelector)) {
+				var el = node.querySelector('i');
 
-			return el && el.tagName === 'I';
+				return !!el && el.tagName === 'I';
+			}
+
+			/**
+			 * for old browsers such as IE version < 9
+			 */
+			if (isFunction(node.getElementsByTagName)) {
+				var children = node.getElementsByTagName('i');
+
+				return !!children && children.length === 1;
+			}
 		}
 
 		return false;

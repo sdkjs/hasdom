@@ -2,7 +2,6 @@ import {document} from './globals.js'
 import isFunction from './utils.js'
 
 /**
- * we should check document.querySelector
  * document.createElement is not reliable
  * some custom WebView without real dom just use canvas via document.createElement
  *
@@ -10,13 +9,27 @@ import isFunction from './utils.js'
  */
 export function hasDOM() {
 
-	if (document && isFunction(document.createElement) && isFunction(document.querySelector)) {
+	if (document && isFunction(document.createElement)) {
 		var node = document.createElement('div')
 		node.innerHTML = '<i></i>'
 
-		var el = node.querySelector('i')
+		/**
+		 * for modern browsers such as IE version >= 9, chrome, firefox
+		 */
+		if (isFunction(node.querySelector)) {
+			var el = node.querySelector('i')
 
-		return !!el && el.tagName === 'I'
+			return !!el && el.tagName === 'I'
+		}
+
+		/**
+		 * for old browsers such as IE version < 9
+		 */
+		if (isFunction(node.getElementsByTagName)) {
+			var children = node.getElementsByTagName('i')
+
+			return !!children && children.length === 1
+		}
 	}
 
 	return false

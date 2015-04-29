@@ -34,6 +34,10 @@ require(['hasdom'], function(_) {
 })
 ```
 
+## Browser Support
+
+Theoretically all old and modern browsers.
+
 
 
 

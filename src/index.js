@@ -11,12 +11,13 @@ export function hasDOM() {
 
 	if (document && isFunction(document.createElement)) {
 		var node = document.createElement('div')
-		node.innerHTML = '<i></i>'
 
 		/**
 		 * for modern browsers such as IE version >= 9, chrome, firefox
 		 */
-		if (isFunction(node.querySelector)) {
+		if (node && isFunction(node.querySelector)) {
+			node.innerHTML = '<i></i>'
+
 			var el = node.querySelector('i')
 
 			return !!el && el.tagName === 'I'

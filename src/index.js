@@ -26,7 +26,7 @@ export function hasDOM() {
 		/**
 		 * for old browsers such as IE version < 9
 		 */
-		if (isFunction(node.getElementsByTagName)) {
+		if (node && isFunction(node.getElementsByTagName)) {
 			var children = node.getElementsByTagName('i')
 
 			return !!children && children.length === 1

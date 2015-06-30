@@ -1,7 +1,7 @@
 /*jshint -W079*/
 
 /**
- * 严格模式下this为undefined
+ * this is undefined in strict mode
  * see http://stackoverflow.com/questions/9642491/getting-a-reference-to-the-global-object-in-an-unknown-environment-in-strict-mod
  */
 

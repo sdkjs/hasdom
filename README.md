@@ -1,9 +1,11 @@
 # hasdom
 Check if a JavaScript environment has a real DOM.
 
-While javascript environment is more complicated than you have ever thought.
-When we talk about `environment`, almost everybody knows about web browser and `node.js`.
-But if you have heard some game engines based on javascript such as `Egret`, `Cocos2d-js` and `layabox`,
+Well, javascript environment is more complicated than you have ever thought.
+When we talk about `environment`, most of us knows about web browser and `node.js`.
+But that's not complete.
+
+If you have heard some game engines based on javascript such as `Egret`, `Cocos2d-js` and `layabox`,
 then you will realize that you are misunderstanding this word.
 
 ## Node.js

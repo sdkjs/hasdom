@@ -1,17 +1,10 @@
 # hasdom
-Check if a JavaScript environment has a real DOM
+Check if a JavaScript environment has a real DOM.
 
-Written by ECMAScript 6 with AMD / CommonJS / UMD support
- 
-Build tools:
-
-> * gulp
-> * babel
-> * jshint
-> * esperanto
-> * uglify
-
-# Install and Usage
+While javascript environment is more complicated than you have ever thought.
+When we talk about `environment`, almost everybody knows about web browser and `node.js`.
+But if you have heard some game engines based on javascript such as `Egret`, `Cocos2d-js` and `layabox`,
+then you will realize that you are misunderstanding this word.
 
 ## Node.js
 
@@ -34,10 +27,14 @@ require(['hasdom'], function(_) {
 })
 ```
 
-## Browser Support
+## Source Code
 
-Theoretically all old and modern browsers.
+Written in ECMAScript 6 with AMD / CommonJS / UMD support
+ 
+## Build Tools
 
-
-
-
+> * gulp
+> * babel
+> * jshint
+> * esperanto
+> * uglify
